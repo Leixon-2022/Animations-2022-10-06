@@ -1,0 +1,35 @@
+body {
+  background-color: #2d2d2d;
+}
+
+.container {
+  background-color: gray;
+  height: 100px;
+
+  /* overflow, döljer överflödet i   x & y-led */
+  overflow: hidden;
+}
+
+.animated-square {
+  width: 100px;
+  height: 100px;
+  background-color: red;
+  animation-name: example-animation;
+  animation-duration: 10s;
+  /* animation */
+  animation-iteration-count: infinite;
+
+}
+
+@keyframes example-animation {
+  from {
+    transform:
+      translateX(0px) translateY(0px) rotateY(0deg)
+  }
+
+  to {
+    background-color: beige;
+    transform:
+      translateX(100px) translateY(100px) rotate(90deg) scale(0.5)
+  }
+}
